@@ -16,10 +16,15 @@ node_modules/
 package-lock.json
 yarn.lock
 
-# Sanity Studio - keep schemas but exclude dependencies and cache
-sanity/node_modules/
-sanity/dist/
-sanity/.sanity/
+# Sanity - exclude from git
+sanity/
+sanity-schemas-oversimplify/
+
+# Oversimplified versions
+app-oversimplify/
+components-oversimplify/
+lib-oversimplify/
+frontend/
 
 # IDE
 .vscode/
