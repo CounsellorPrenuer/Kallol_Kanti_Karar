@@ -15,7 +15,11 @@ export default async function Page({ params }: { params: PageParams }) {
   let page = null
 
   try {
-    page = await getPageBySlug(params.slug)
+    // Add 5-second timeout for Sanity fetch
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Timeout')), 5000)
+    )
+    page = await Promise.race([getPageBySlug(params.slug), timeoutPromise])
   } catch (error) {
     console.log(`[Page ${params.slug}] Fetch failed:`, error)
   }

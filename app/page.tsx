@@ -8,9 +8,13 @@ export default async function Home() {
   let homePage = null
 
   try {
-    homePage = await getPageBySlug('home')
+    // Add 5-second timeout for Sanity fetch
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Timeout')), 5000)
+    )
+    homePage = await Promise.race([getPageBySlug('home'), timeoutPromise])
   } catch (error) {
-    console.log('[Home] Failed to fetch home page, using fallback')
+    console.log('[Home] Failed to fetch home page, using fallback', error)
   }
 
   // If home page exists in Sanity, render it directly
