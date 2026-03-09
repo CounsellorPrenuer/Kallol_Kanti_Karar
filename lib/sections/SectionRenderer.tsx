@@ -1,7 +1,8 @@
 'use client'
 
 import React from 'react'
-import { getSectionComponent, SectionProps } from './registry'
+import { getSectionComponent } from './registry-data'
+import { SectionProps } from './types'
 
 interface SectionRendererProps {
     sections: SectionProps[]
