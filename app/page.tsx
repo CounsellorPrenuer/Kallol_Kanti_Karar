@@ -1,4 +1,5 @@
 import { getLegacyHomeContent, getPageBySlug } from '@/lib/sanity'
+import { getSectionComponent } from '@/lib/sections/registry'
 
 function buildLegacySections(legacyContent: any) {
   const sections: any[] = []
@@ -144,7 +145,6 @@ export default async function Home() {
 
   // If home page exists in Sanity with sections, render it. If not, fallback to legacy content.
   if (pageSections.length > 0 || legacySections.length > 0) {
-    const { getSectionComponent } = await import('@/lib/sections/registry')
     const allSections = pageSections.length > 0 ? pageSections : legacySections
     const footerSection = allSections.find((s: any) => s._type === 'footerSection')
     const regularSections = allSections.filter((s: any) => s._type !== 'footerSection')
@@ -159,7 +159,6 @@ export default async function Home() {
           })
         ) : null}
         {footerSection && (() => {
-          const { getSectionComponent } = require('@/lib/sections/registry')
           const FooterComponent = getSectionComponent(footerSection._type)
           if (FooterComponent) return <FooterComponent key={footerSection._key || 'footer'} {...footerSection} />
           return null
