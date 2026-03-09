@@ -1,5 +1,5 @@
 import { getLegacyHomeContent, getPageBySlug } from '@/lib/sanity'
-import { getSectionComponent } from '@/lib/sections/registry'
+import { getSectionComponent, SectionRenderer } from '@/lib/sections/registry'
 
 function buildLegacySections(legacyContent: any) {
   const sections: any[] = []
@@ -151,13 +151,7 @@ export default async function Home() {
 
     return (
       <main>
-        {regularSections.length > 0 ? (
-          regularSections.map((section: any, idx: number) => {
-            const Component = getSectionComponent(section._type)
-            if (!Component) return null
-            return <Component key={section._key || idx} {...section} />
-          })
-        ) : null}
+        <SectionRenderer sections={regularSections} />
         {footerSection && (() => {
           const FooterComponent = getSectionComponent(footerSection._type)
           if (FooterComponent) return <FooterComponent key={footerSection._key || 'footer'} {...footerSection} />

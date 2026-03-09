@@ -1,6 +1,6 @@
 import { getPageBySlug, getAllPageSlugs } from '@/lib/sanity'
 
-import { getSectionComponent, SectionProps } from '@/lib/sections/registry'
+import { getSectionComponent, SectionProps, SectionRenderer } from '@/lib/sections/registry'
 import { notFound } from 'next/navigation'
 import React from 'react'
 
@@ -40,32 +40,8 @@ export default async function Page({ params }: { params: PageParams }) {
 
   return (
     <main>
-      {/* Render regular sections first */}
       {regularSections.length > 0 ? (
-        regularSections.map((section: SectionProps, idx: number) => {
-          const Component = getSectionComponent(section._type)
-
-          if (!Component) {
-            console.error(`[RENDERING ERROR] No component found for section type: ${section._type}`)
-            // Render error placeholder in development
-            return (
-              <div key={section._key || idx} style={{
-                padding: '20px',
-                margin: '20px',
-                backgroundColor: 'var(--color-surface)',
-                border: '2px solid var(--color-primary)',
-                borderRadius: '4px'
-              }}>
-                <p style={{ margin: 0, color: 'var(--color-text-primary)' }}>
-                  ⚠️ Missing component for section type: <strong>{section._type}</strong>
-                </p>
-              </div>
-            )
-          }
-
-          console.log(`[Rendering] ${section._type}`)
-          return <Component key={section._key || idx} {...section} />
-        })
+        <SectionRenderer sections={regularSections} />
       ) : (
         <div style={{ padding: '40px', textAlign: 'center', color: 'var(--color-text-secondary)' }}>
           <p>No sections added to this page yet.</p>

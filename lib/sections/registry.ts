@@ -4,6 +4,8 @@
  * Used by the page renderer to dynamically render sections
  */
 
+export { SectionRenderer } from './SectionRenderer'
+
 import { HeroSection } from '@/components/sections/HeroSection'
 import { AboutSection } from '@/components/sections/AboutSection'
 import { ServiceSection } from '@/components/sections/ServiceSection'
