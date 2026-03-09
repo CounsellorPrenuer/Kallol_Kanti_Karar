@@ -17,7 +17,7 @@ const customizePackages = [
     {
         title: 'Career Report + Career Counselling',
         price: '₹3,000',
-        description: 'Connect with India\'s top career coaches to analyse your psychometric report and shortlist the top three career paths you\'re most likely to enjoy and excel at.',
+        description: 'Connect with India&apos;s top career coaches to analyse your psychometric report and shortlist the top three career paths you&apos;re most likely to enjoy and excel at.',
         icon: '📝'
     },
     {
@@ -41,7 +41,7 @@ const customizePackages = [
     {
         title: 'Exam Stress Management',
         price: '₹1,000',
-        description: 'Get expert guidance on tackling exam stress, planning your study schedule, revision tips and more from India\'s top educators. Increase your chances of acing exams with a calm and clear mind.',
+        description: 'Get expert guidance on tackling exam stress, planning your study schedule, revision tips and more from India&apos;s top educators. Increase your chances of acing exams with a calm and clear mind.',
         icon: '🧠'
     },
     {
@@ -251,7 +251,7 @@ export function MentoriaPackagesSection({ title, subtitle, id, categories }: Sec
                     ) : (
                         <div style={{ textAlign: 'center', padding: '40px', width: '100%', backgroundColor: '#ffffff', borderRadius: '16px', border: '1px dashed #3b82f6' }}>
                             <h3 style={{ color: '#3b82f6', fontSize: '1.4rem', marginBottom: '10px' }}>No Packages Added Yet</h3>
-                            <p style={{ color: '#475569' }}>You haven't added any packages to this tab in Sanity Studio.</p>
+                            <p style={{ color: '#475569' }}>You haven&apos;t added any packages to this tab in Sanity Studio.</p>
                         </div>
                     )}
                 </div>

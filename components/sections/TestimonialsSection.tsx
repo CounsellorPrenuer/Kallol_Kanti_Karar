@@ -2,6 +2,7 @@
 
 import { SectionProps } from '@/lib/sections/types'
 import { urlForImage } from '@/lib/sanity'
+import Image from 'next/image'
 
 export function TestimonialsSection({ heading, testimonials, id }: SectionProps) {
   return (
@@ -39,24 +40,29 @@ export function TestimonialsSection({ heading, testimonials, id }: SectionProps)
                     )}
                     {testimonial.quote && (
                       <p style={{ fontSize: '1rem', fontStyle: 'italic', marginBottom: '20px', color: 'var(--color-text-primary)' }}>
-                        "{testimonial.quote}"
+                        &quot;{testimonial.quote}&quot;
                       </p>
                     )}
                     {testimonial.contentImage && (
                       <div style={{ marginBottom: '20px', borderRadius: '8px', overflow: 'hidden' }}>
-                        <img
-                          src={urlForImage(testimonial.contentImage).url()}
-                          alt="Testimonial attachment"
-                          style={{ width: '100%', height: 'auto', display: 'block' }}
-                        />
+                        <div style={{ position: 'relative', width: '100%', height: '300px' }}>
+                          <Image
+                            src={urlForImage(testimonial.contentImage).url()}
+                            alt="Testimonial attachment"
+                            fill
+                            style={{ objectFit: 'cover' }}
+                          />
+                        </div>
                       </div>
                     )}
                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
                       {photoUrl && (
-                        <img
+                        <Image
                           src={photoUrl}
                           alt={testimonial.author || 'Author photo'}
-                          style={{ width: '48px', height: '48px', borderRadius: '9999px', objectFit: 'cover' }}
+                          width={48}
+                          height={48}
+                          style={{ borderRadius: '9999px', objectFit: 'cover' }}
                         />
                       )}
                       <div>

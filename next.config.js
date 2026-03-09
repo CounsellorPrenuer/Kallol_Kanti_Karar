@@ -3,7 +3,6 @@ const nextConfig = {
   output: 'export',
   basePath: '/Kallol_Kanti_Karar',
   trailingSlash: true,
-  distDir: 'build_output',
   reactStrictMode: true,
   compiler: {
     styledComponents: true,

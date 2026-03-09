@@ -84,7 +84,14 @@ export async function generateStaticParams() {
     }).filter(Boolean) || []
 
     // Combine and remove duplicates, including explicit common ones
-    const allSlugs = Array.from(new Set([...pageSlugs, ...navbarSlugs, 'about', 'services', 'contact']))
+    // Normalize to lowercase to avoid case-sensitive collisions on Linux CI
+    const allSlugs = Array.from(new Set([
+      ...pageSlugs,
+      ...navbarSlugs,
+      'about',
+      'services',
+      'contact'
+    ].map(s => s.toLowerCase())))
 
     return allSlugs.map((slug) => ({
       slug,

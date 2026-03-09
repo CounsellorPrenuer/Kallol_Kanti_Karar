@@ -184,7 +184,7 @@ export default async function Home() {
         </a>
       </p>
       <p style={{ marginTop: '40px', color: 'var(--color-text-secondary)', fontSize: '0.9rem' }}>
-        Create a page with slug "home" in Sanity to get started.
+        Create a page with slug &quot;home&quot; in Sanity to get started.
       </p>
     </main>
   )

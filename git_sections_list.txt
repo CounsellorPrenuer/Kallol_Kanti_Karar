@@ -1,0 +1,11 @@
+﻿components/sections/AboutSection.tsx
+components/sections/CTASection.tsx
+components/sections/ContactSection.tsx
+components/sections/FAQSection.tsx
+components/sections/FeaturesSection.tsx
+components/sections/FooterSection.tsx
+components/sections/HeroSection.tsx
+components/sections/MentoriaPackagesSection.tsx
+components/sections/ServiceSection.tsx
+components/sections/TestimonialSection.tsx
+components/sections/TestimonialsSection.tsx

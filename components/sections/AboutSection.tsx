@@ -89,7 +89,7 @@ export function AboutSection({ title, subtitle, description, quote, image, id, h
                 lineHeight: '1.6'
               }}
             >
-              "{quote}"
+              &quot;{quote}&quot;
             </div>
           )}
 
