@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '',
+  trailingSlash: true,
   distDir: 'build_output',
   reactStrictMode: true,
   compiler: {
