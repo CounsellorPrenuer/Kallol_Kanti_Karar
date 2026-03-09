@@ -1,4 +1,6 @@
-﻿import { useState, useEffect } from 'react'
+﻿'use client'
+
+import { useState, useEffect } from 'react'
 import { SectionProps } from '@/lib/sections/registry'
 import { urlForImage } from '@/lib/sanity'
 
