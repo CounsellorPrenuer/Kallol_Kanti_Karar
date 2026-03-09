@@ -14,8 +14,7 @@ build_output/
 
 # Dependencies
 node_modules/
-package-lock.json
-yarn.lock
+yarn-error.log
 
 # Sanity - exclude from git
 sanity/

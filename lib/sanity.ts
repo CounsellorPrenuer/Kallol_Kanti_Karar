@@ -11,7 +11,7 @@ const dataset = process.env.NEXT_PUBLIC_SANITY_DATASET || 'production'
 const apiVersion = '2024-01-01'
 
 if (!projectId) {
-  throw new Error('NEXT_PUBLIC_SANITY_PROJECT_ID is not set')
+  console.error('WARNING: NEXT_PUBLIC_SANITY_PROJECT_ID is not set. Content fetching will fail.')
 }
 
 const token = process.env.SANITY_API_TOKEN
