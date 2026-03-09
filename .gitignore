@@ -4,6 +4,7 @@
 .next/
 out/
 build/
+build_output/
 .vercel/
 
 # Environment variables
@@ -19,6 +20,7 @@ yarn.lock
 # Sanity - exclude from git
 sanity/
 sanity-schemas-oversimplify/
+payment-worker/
 
 # Oversimplified versions
 app-oversimplify/

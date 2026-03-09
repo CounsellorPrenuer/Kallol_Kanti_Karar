@@ -1,7 +1,6 @@
 ﻿import type { Metadata } from 'next'
 import React from 'react'
 
-export const revalidate = 0 // Disable caching to show changes immediately
 import './globals.css'
 import { Navbar } from '@/components/Navbar'
 import { getNavbar, getSiteConfig } from '@/lib/sanity'
@@ -55,6 +54,9 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
+      </head>
       <body
         style={{
           margin: 0,

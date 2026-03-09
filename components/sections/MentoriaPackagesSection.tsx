@@ -228,6 +228,14 @@ export function MentoriaPackagesSection({ title, subtitle, id, categories }: Sec
                                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1d4ed8'}
                                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3b82f6'}
                                     onClick={() => {
+                                        const packageInfo = {
+                                            name: pkg.name,
+                                            price: pkg.price?.replace('₹', '').replace(',', ''),
+                                            id: pkg._key || idx
+                                        };
+                                        localStorage.setItem('selectedPackage', JSON.stringify(packageInfo));
+                                        window.dispatchEvent(new CustomEvent('packageSelected', { detail: packageInfo }));
+
                                         const contactSection = document.getElementById('contact');
                                         if (contactSection) {
                                             contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -300,6 +308,14 @@ export function MentoriaPackagesSection({ title, subtitle, id, categories }: Sec
                                     onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#1d4ed8'}
                                     onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#3b82f6'}
                                     onClick={() => {
+                                        const packageInfo = {
+                                            name: pkg.title,
+                                            price: pkg.price?.replace('₹', '').replace(',', ''),
+                                            id: `custom-${idx}`
+                                        };
+                                        localStorage.setItem('selectedPackage', JSON.stringify(packageInfo));
+                                        window.dispatchEvent(new CustomEvent('packageSelected', { detail: packageInfo }));
+
                                         const contactSection = document.getElementById('contact');
                                         if (contactSection) {
                                             contactSection.scrollIntoView({ behavior: 'smooth' });

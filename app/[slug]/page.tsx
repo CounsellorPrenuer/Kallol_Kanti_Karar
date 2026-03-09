@@ -1,6 +1,5 @@
 import { getPageBySlug, getAllPageSlugs } from '@/lib/sanity'
 
-export const revalidate = 0
 import { getSectionComponent, SectionProps } from '@/lib/sections/registry'
 import { notFound } from 'next/navigation'
 import React from 'react'

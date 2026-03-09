@@ -1,7 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: process.env.NODE_ENV === 'production' ? '/Kallol_Kanti_Karar' : '',
+  basePath: '',
+  distDir: 'build_output',
   reactStrictMode: true,
   images: {
     unoptimized: true,

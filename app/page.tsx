@@ -1,7 +1,5 @@
 import { getLegacyHomeContent, getPageBySlug } from '@/lib/sanity'
 
-export const revalidate = 0
-
 function buildLegacySections(legacyContent: any) {
   const sections: any[] = []
 
