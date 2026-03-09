@@ -1,6 +1,6 @@
 ﻿'use client'
 
-import { SectionProps } from '@/lib/sections/registry'
+import { SectionProps } from '@/lib/sections/types'
 import { urlForImage } from '@/lib/sanity'
 
 export function HeroSection({ heading, subheading, backgroundImage, cta }: SectionProps) {

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import type { SectionProps } from '@/lib/sections/registry'
+import type { SectionProps } from '@/lib/sections/types'
 
 
 

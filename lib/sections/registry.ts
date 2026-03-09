@@ -14,12 +14,8 @@ import { FeaturesSection } from '@/components/sections/FeaturesSection'
 import { TestimonialsSection } from '@/components/sections/TestimonialsSection'
 import { FAQSection } from '@/components/sections/FAQSection'
 import { CTASection } from '@/components/sections/CTASection'
-import { MentoriaPackagesSection } from '../../components/sections/MentoriaPackagesSection'
-export interface SectionProps {
-  _key: string
-  _type: string
-  [key: string]: any
-}
+import { MentoriaPackagesSection } from '@/components/sections/MentoriaPackagesSection'
+export { type SectionProps } from './types'
 
 /**
  * Registry of all available sections

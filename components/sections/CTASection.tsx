@@ -1,6 +1,6 @@
 ﻿'use client'
 
-import { SectionProps } from '@/lib/sections/registry'
+import { SectionProps } from '@/lib/sections/types'
 
 export function CTASection({ heading, description, backgroundColor, buttons, id }: SectionProps) {
   return (

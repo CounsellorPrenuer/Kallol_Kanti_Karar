@@ -1,7 +1,7 @@
 ﻿'use client'
 
 import { useState, useEffect } from 'react'
-import { SectionProps } from '@/lib/sections/registry'
+import { SectionProps } from '@/lib/sections/types'
 import { urlForImage } from '@/lib/sanity'
 
 // IMPORTANT: Replace with your deployed Cloudflare Worker URL

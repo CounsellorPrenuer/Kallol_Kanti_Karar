@@ -1,7 +1,7 @@
 ﻿'use client'
 
 import React from 'react'
-import { SectionProps } from '@/lib/sections/registry'
+import { SectionProps } from '@/lib/sections/types'
 
 export function FAQSection({ heading, faqs, id }: SectionProps) {
   const [openIdx, setOpenIdx] = React.useState<number | null>(null)

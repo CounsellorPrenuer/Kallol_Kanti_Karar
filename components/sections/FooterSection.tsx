@@ -1,6 +1,6 @@
 ﻿'use client'
 
-import { SectionProps } from '@/lib/sections/registry'
+import { SectionProps } from '@/lib/sections/types'
 
 export function FooterSection({ companyName, description, socialLinks, copyright }: SectionProps) {
   return (

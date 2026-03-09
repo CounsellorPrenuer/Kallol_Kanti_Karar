@@ -1,6 +1,6 @@
 ﻿'use client'
 
-import { SectionProps } from '@/lib/sections/registry'
+import { SectionProps } from '@/lib/sections/types'
 
 export function ServiceSection({ title, description, services, id }: SectionProps) {
   const primaryBlue = '#2563eb'
