@@ -4,6 +4,9 @@ const nextConfig = {
   basePath: '',
   distDir: 'build_output',
   reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
