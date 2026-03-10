@@ -24,15 +24,15 @@ next-env.d.ts
 .github/
 
 # Allow root-level static assets for manual GitHub Pages hosting
-!/_next/
-!/index.html
-!/404.html
-!/favicon.svg
-!/about/
-!/contact/
-!/services/
-!/home/
-!/favicon.ico
+!_next/
+!index.html
+!404.html
+!favicon.svg
+!about/
+!contact/
+!services/
+!home/
+!favicon.ico
 
 # Environment variables
 .env
