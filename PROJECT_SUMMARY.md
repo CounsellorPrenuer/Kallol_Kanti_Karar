@@ -27,16 +27,20 @@ FILE_STRUCTURE.md     ← File organization
 .gitignore            ← Git configuration
 ```
 
-### Frontend (Your Public Website)
+### Frontend Website (Next.js App Router)
 ```
-frontend/
-├── index.html         ← Main HTML file
-├── package.json       ← Frontend info
-├── README.md          ← Frontend guide
-└── src/
-    ├── styles/main.css        ← All styling (25 KB, CSS variables)
-    ├── scripts/app.js         ← Main application (12 KB, vanilla JS)
-    └── utils/sanityClient.js  ← Sanity integration (7 KB)
+app/
+├── [slug]/page.tsx    ← Dynamic page renderer
+├── globals.css        ← Base styles
+├── layout.tsx         ← Root layout & font
+└── page.tsx           ← Homepage
+
+components/
+└── sections/          ← UI Section components (Hero, About, etc.)
+
+lib/
+├── sanity.ts          ← Sanity client & GROQ queries
+└── sections/          ← Section registry & renderer
 ```
 
 ### Sanity (Your CMS Backend)

@@ -166,19 +166,14 @@ Service 4:
    - `http://localhost:3000`
    - `https://yourusername.github.io` (when you deploy)
 
-## Phase 2: Setup Frontend (GitHub Pages)
+## Phase 2: Setup Frontend (Next.js)
 
 ### Step 2.1: Configure Frontend
 
-Edit `frontend/src/utils/sanityClient.js`:
-
-Find this section:
-```javascript
-const SANITY_CONFIG = {
-  projectId: 'YOUR_PROJECT_ID',  // ← Replace this
-  dataset: 'production',
-  // ...
-}
+Ensure you have a `.env.local` file in the root directory with your Sanity Project ID:
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=YOUR_PROJECT_ID
+NEXT_PUBLIC_SANITY_DATASET=production
 ```
 
 Replace `YOUR_PROJECT_ID` with your actual Sanity Project ID from Step 1.3.
@@ -186,14 +181,12 @@ Replace `YOUR_PROJECT_ID` with your actual Sanity Project ID from Step 1.3.
 ### Step 2.2: Test Locally
 
 ```bash
-# Navigate to frontend folder
-cd frontend
-
-# Start local server
-python -m http.server 8000
+# In the root project folder
+npm install
+npm run dev
 ```
 
-Visit `http://localhost:8000` in your browser.
+Visit `http://localhost:3000` in your browser.
 
 **You should see your website with all content from Sanity!**
 
@@ -227,15 +220,14 @@ git push -u origin main
 ### Step 2.4: Enable GitHub Pages
 
 1. Go to your GitHub repository
-2. Settings → Pages
-3. Under "Source", select:
-   - Branch: `main`
-   - Folder: `/frontend`
-4. Click Save
+2. **Settings → Pages**
+3. Under **Build and deployment > Source**, select:
+   - **GitHub Actions** (This is crucial for Next.js deployments)
+4. Push a change to your repository to trigger the deployment.
 
-**Your site is now live at**: `https://yourusername.github.io/professional-website`
+**Your site is now live at**: `https://yourusername.github.io/`
 
-(Note: Update the URL with your actual username and repository name)
+(Note: Update the URL with your actual username)
 
 ### Step 2.5: Update Frontend CORS
 
@@ -302,12 +294,11 @@ Try editing:
 
 Once everything is working:
 
-1. **Customize styling** - Edit `frontend/src/styles/main.css`
-2. **Add more content** - Create more Service cards in Sanity
-3. **Connect form** - Update `handleFormSubmit()` in `app.js` to send to a backend
-4. **Custom domain** - Set up with GitHub Pages custom domain
-5. **Analytics** - Add Google Analytics or Plausible
-6. **SEO** - Add more meta tags and structured data
+1. **Customize styling** - Edit `components/sections/` UI components.
+2. **Add more content** - Create more Service cards in Sanity.
+3. **Custom domain** - Set up with GitHub Pages custom domain.
+4. **Analytics** - Add Google Analytics or Plausible.
+5. **SEO** - Add more meta tags and structured data in `app/layout.tsx`.
 
 ## Support
 

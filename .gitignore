@@ -7,6 +7,32 @@ build/
 build_output/
 .vercel/
 
+# Source Code - Keep locally, but do not push to main branch
+app/
+components/
+lib/
+scripts/
+sanity/
+public/
+payment-worker/
+package.json
+package-lock.json
+tsconfig.json
+next.config.js
+.eslintrc.json
+next-env.d.ts
+
+# Allow root-level static assets for manual GitHub Pages hosting
+!/_next/
+!/index.html
+!/404.html
+!/favicon.svg
+!/about/
+!/contact/
+!/services/
+!/home/
+!/favicon.ico
+
 # Environment variables
 .env
 .env.local

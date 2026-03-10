@@ -19,20 +19,20 @@ You now have a **complete, production-ready website with full Sanity CMS integra
 ✅ DIRECTORY_TREE.md         - Complete file tree
 ```
 
-#### Configuration (2 files)
+#### Configuration (3 files)
 ```
-✅ .env.example              - Environment variables template
-✅ .gitignore                - Git configuration
+✅ .env.local                - Environment variables
+✅ next.config.js            - Next.js configuration
+✅ tsconfig.json             - TypeScript configuration
 ```
 
-#### Frontend Website (5 files)
+#### Frontend Website (Next.js App Router)
 ```
-✅ frontend/index.html       - Main HTML structure
-✅ frontend/package.json     - Frontend metadata
-✅ frontend/README.md        - Frontend documentation
-✅ frontend/src/styles/main.css       - All styling (25 KB, 800 lines)
-✅ frontend/src/scripts/app.js        - Main logic (12 KB, 500 lines)
-✅ frontend/src/utils/sanityClient.js - Sanity integration (7 KB, 300 lines)
+✅ app/page.tsx             - Main homepage component
+✅ app/layout.tsx           - Root layout and metadata
+✅ components/sections/      - Reusable UI sections
+✅ lib/sanity.ts            - Sanity client and queries
+✅ lib/sections/registry.ts  - Dynamic section renderer
 ```
 
 #### Sanity CMS Backend (10 files)
@@ -109,8 +109,8 @@ This walks you through:
 
 ### 3. Test Locally (5 minutes)
 - Start Sanity Studio: `cd sanity && npm run dev`
-- Start frontend: `cd frontend && python -m http.server 8000`
-- Visit `http://localhost:8000`
+- Start frontend: `npm run dev` (in the root folder)
+- Visit `http://localhost:3000`
 - Create test content in Sanity
 - Verify website loads correctly
 
@@ -195,9 +195,10 @@ npm run dev
 
 ### Run Frontend Locally
 ```bash
-cd frontend
-python -m http.server 8000
-# Visit http://localhost:8000
+# In the root project folder
+npm install
+npm run dev
+# Visit http://localhost:3000
 ```
 
 ### Deploy to GitHub
@@ -348,7 +349,7 @@ Hosting: GitHub Pages (free, fast)
 ### Deployment
 - [ ] Push to GitHub
 - [ ] Enable GitHub Pages
-- [ ] Set /frontend as source
+- [ ] Set "Source" to **GitHub Actions**
 - [ ] Website is live!
 
 ---
