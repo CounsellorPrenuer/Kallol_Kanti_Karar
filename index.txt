@@ -1,4 +1,4 @@
-0:["eOgccGbjctpq-7MvGptMP",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/Kallol_Kanti_Karar/_next/static/css/32b5a0dc054a690e.css","precedence":"next","crossOrigin":"$undefined"}]],"$L3"],null],null],["$L4",null]]]]
+0:["HNXjVaLfCxpzR0-f17HF6",[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",{"children":["__PAGE__",{},[["$L1","$L2",null],null],null]},[[[["$","link","0",{"rel":"stylesheet","href":"/Kallol_Kanti_Karar/_next/static/css/32b5a0dc054a690e.css","precedence":"next","crossOrigin":"$undefined"}]],"$L3"],null],null],["$L4",null]]]]
 4:[["$","meta","0",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","1",{"charSet":"utf-8"}],["$","title","2",{"children":"Remixable Template"}],["$","meta","3",{"name":"description","content":"A reusable section-based website template powered by Sanity CMS"}]]
 1:null
 5:I[6487,["237","static/chunks/237-0891a7e90e1d5574.js","339","static/chunks/339-58b49192adf37a2a.js","931","static/chunks/app/page-261c29e1d877ecbc.js"],"SectionRenderer"]
