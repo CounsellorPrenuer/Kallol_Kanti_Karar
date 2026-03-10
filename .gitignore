@@ -21,6 +21,7 @@ tsconfig.json
 next.config.js
 .eslintrc.json
 next-env.d.ts
+.github/
 
 # Allow root-level static assets for manual GitHub Pages hosting
 !/_next/
